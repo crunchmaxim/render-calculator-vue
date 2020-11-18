@@ -72,8 +72,6 @@ export default {
         margin-bottom: 16px;
         margin-top: 14px;
         text-align: left;
-        // width: 100%;
-        // text-align: center;
       }
 
       &:before {

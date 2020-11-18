@@ -3,24 +3,22 @@
     <Navbar />
     <div class="container">
       <CalcWrapper />
+      <CardSelectWrapper :cardId=0 />
     </div>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/> -->
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar.vue";
 import CalcWrapper from "@/components/CalcWrapper.vue";
+import CardSelectWrapper from "@/components/CardSelectWrapper.vue";
 
 export default {
   name: "App",
   components: {
     Navbar,
     CalcWrapper,
+    CardSelectWrapper
   },
 };
 </script>
@@ -42,6 +40,9 @@ export default {
     padding-left: 172px;
     padding-right: 57px;
     background: #fbfbfb;
+
+    /////
+    height: 1000px;
   }
 
   .input {
@@ -61,8 +62,6 @@ export default {
 
     &:focus {
       outline: 2px solid #526ae5;
-
-      // border: 1px solid #526AE5;
     }
   }
 
