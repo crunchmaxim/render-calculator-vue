@@ -2,9 +2,7 @@
   <div id="app">
     <Navbar />
     <div class="container">
-      some text
-
-
+      <CalcWrapper />
     </div>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -15,48 +13,68 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
+import Navbar from "@/components/Navbar.vue";
+import CalcWrapper from "@/components/CalcWrapper.vue";
 
 export default {
-    name: "App",
-    components: {
-      Navbar
-    }
-}
+  name: "App",
+  components: {
+    Navbar,
+    CalcWrapper,
+  },
+};
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;600;700&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;600;700&display=swap");
 
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    // font-family: "Poppins", sans-serif;
+    color: #595d6e;
+  }
 
-.container {
-  padding-top: 79px;
-}
+  .container {
+    padding-top: 100px;
+    padding-left: 172px;
+    padding-right: 57px;
+    background: #fbfbfb;
+  }
 
-// #app {
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-// }
+  .input {
+    border: none;
+    border-radius: 4px;
+    width: 156px;
+    height: 45px;
+    margin-right: 25px;
+    padding-left: 22px;
+    font-size: 16px;
+    color: #595d6e;
+    border-radius: 4px;
 
-// #nav {
-//   padding: 30px;
+    &::placeholder {
+      color: #a7abc3;
+    }
 
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
+    &:focus {
+      outline: 2px solid #526ae5;
 
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
+      // border: 1px solid #526AE5;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+      background: #f5f6fc;
+    }
+
+    .input {
+      box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+    }
+  }
 </style>
