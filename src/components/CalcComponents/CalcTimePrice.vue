@@ -6,6 +6,7 @@
         class="input time"
         type="text"
         readonly
+        v-model="renderTime"
       >
     </div>
     <div class="time-price__input-wrapper">
@@ -14,6 +15,7 @@
         class="input price"
         type="text"
         readonly
+        v-model="price"
       >
       <img
         class="time-price__warning"
@@ -24,8 +26,19 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
+
 export default {
-  name: "CalcTimePrice"
+  name: "CalcTimePrice",
+  computed: {
+    ...mapGetters(["GET_RENDER_TIME", "GET_PRICE"]),
+    renderTime() {
+      return this.GET_RENDER_TIME
+    },
+    price() {
+      return this.GET_PRICE
+    }
+  }
 };
 </script>
 

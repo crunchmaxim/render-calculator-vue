@@ -181,6 +181,12 @@ export default new Vuex.Store({
     },
     GET_ERROR: (state) => {
       return state.error
+    },
+    GET_RENDER_TIME: (state) => {
+      return state.renderTime
+    },
+    GET_PRICE: (state) => {
+      return state.price
     }
   }
 })
