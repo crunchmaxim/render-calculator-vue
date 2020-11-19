@@ -2,8 +2,7 @@
   <div id="app">
     <Navbar />
     <div class="container">
-      <CalcWrapper />
-      <CardSelectWrapper :cardId=0 />
+      <CalcWrapper />      
     </div>
   </div>
 </template>
@@ -11,14 +10,13 @@
 <script>
 import Navbar from "@/components/Navbar.vue";
 import CalcWrapper from "@/components/CalcWrapper.vue";
-import CardSelectWrapper from "@/components/CardSelectWrapper.vue";
+
 
 export default {
   name: "App",
   components: {
     Navbar,
     CalcWrapper,
-    CardSelectWrapper
   },
 };
 </script>
@@ -40,9 +38,6 @@ export default {
     padding-left: 172px;
     padding-right: 57px;
     background: #fbfbfb;
-
-    /////
-    height: 1000px;
   }
 
   .input {

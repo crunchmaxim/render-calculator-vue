@@ -35,11 +35,12 @@ export default {
 <style lang="scss">
   .frames {
     margin-top: 7px;
-    height: 109px;
+    height: 155px;
     border-radius: 4px;
     background-color: #f5f6fc;
     padding-top: 14px;
     padding-left: 22px;
+    padding-bottom: 20px;
     display: flex;
 
     &__title {
@@ -64,6 +65,7 @@ export default {
       flex-direction: column;
       height: 100%;
       padding: 0 20px;
+      padding-bottom: 20px;
 
       &__title {
         text-align: center;

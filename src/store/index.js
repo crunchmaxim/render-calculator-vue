@@ -13,7 +13,42 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
+    // Change current values for card
+    SET_GRAPHIC_CARD: (state, payload) => {
+      state.currentCards[payload.cardId].graphicCard = payload.graphicCard
+    },
+    SET_CARD_LINE: (state, payload) => {
+      state.currentCards[payload.cardId].cardLine = payload.cardLine
+    },
+    SET_CARD_MODEL: (state, payload) => {
+      state.currentCards[payload.cardId].cardModel = payload.cardModel
+    },
+    SET_CARD_COUNT: (state, payload) => {
+      state.currentCards[payload.cardId].cardCount = payload.cardCount
+    },
+    // Add new card
+    ADD_NEW_CARD: (state) => {
 
+      if (state.currentCards.length !== 0) {
+        let newId = state.currentCards[state.currentCards.length-1].id + 1
+        state.currentCards.push({id: newId, graphicCard: 'GT', cardLine: '4xx', cardModel: 'GT 420', cardCount: 1 })
+      } else {
+        state.currentCards = [{id: 0, graphicCard: 'GT', cardLine: '4xx', cardModel: 'GT 420', cardCount: 1 }]
+      }
+
+    },
+    // Delete card
+    DELETE_CARD: (state, id) => {
+      // state.currentCards = state.currentCards.filter(card => card.id !== id)
+
+      let currentCards = []
+      state.currentCards.filter(card => card.id !== id).forEach((card, index) => {
+        card.id = index
+        currentCards.push(card)
+      })
+      state.currentCards = currentCards  
+      
+    }
   },
   actions: {
   },
@@ -64,5 +99,9 @@ export default new Vuex.Store({
 
       return cards_models
     },
+    // Get all current cards
+    GET_CURRENTS_CARDS: (state) => {
+      return state.currentCards
+    }
   }
 })
