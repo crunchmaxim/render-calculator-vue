@@ -11,13 +11,16 @@
           type="checkbox"
           id="animation"
           name="animation"
+          v-model="animationChecked"
+          @change="changeAnimation"
         >
         <span class="details__radio"></span>
       </div>
       <div class="details__checkbox-wrapper">
         <label for="static">Still </label>
         <input
-          checked
+          v-model="staticChecked"
+          @change="changeStatic"
           class="details__checkbox"
           type="checkbox"
           id="static"
@@ -31,8 +34,42 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from "vuex";
+
 export default {
   name: "CalcProjectDetails",
+  data() {
+    return {
+      animationChecked: "",
+      staticChecked: "",
+    };
+  },
+  methods: {
+    ...mapMutations(["SET_PROJECT_DETAILS"]),
+    changeAnimation() {
+      this.staticChecked = !this.staticChecked
+      this.SET_PROJECT_DETAILS()
+    },
+    changeStatic() {
+      this.animationChecked = !this.animationChecked
+      this.SET_PROJECT_DETAILS()
+    },
+  },
+  mounted() {
+    if (this.projectDetails === "static") {
+      this.animationChecked = false;
+      this.staticChecked = true;
+    } else if (this.projectDetails === "animation") {
+      this.animationChecked = true;
+      this.staticChecked = false;
+    }
+  },
+  computed: {
+    ...mapGetters(["GET_PROJECT_DETAILS"]),
+    projectDetails() {
+      return this.GET_PROJECT_DETAILS;
+    },
+  },
 };
 </script>
 

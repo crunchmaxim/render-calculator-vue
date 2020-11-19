@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: "CalcTimePrice",
+  name: "CalcTimePrice"
 };
 </script>
 

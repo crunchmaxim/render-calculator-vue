@@ -12,15 +12,15 @@
       class="add-card"
       @click="addCard"
     >
-      Add another type card <img
+      <span>Add another type card <img
         class="add-card__img"
         :src="require('../../assets/add_circle.png')"
         alt=""
-      >
+      ></span> 
     </div>
     <div class="calc-cards__calculate">
     <button
-      @click="calculate"
+      @click="makeCalculate"
       class="calc-cards__calculate-btn"
     >Calculate</button>
     </div>
@@ -37,12 +37,12 @@ export default {
     CardSelectWrapper,
   },
   methods: {
-    ...mapMutations(["ADD_NEW_CARD"]),
+    ...mapMutations(["ADD_NEW_CARD", "CALCULATE"]),
     addCard() {
       this.ADD_NEW_CARD();
     },
-    calculate() {
-      console.log("CALCULATE!");
+    makeCalculate() {
+      this.CALCULATE()
     },
   },
   computed: {
@@ -88,7 +88,13 @@ export default {
 
   .add-card {
     display: flex;
-    cursor: pointer;
+    // cursor: pointer;
+
+    & span {
+      display: flex;
+      cursor: pointer;
+    }
+
 
     &__img {
       margin-left: 15px;
