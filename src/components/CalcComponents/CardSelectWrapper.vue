@@ -167,7 +167,7 @@ export default {
       // background-color: #fff;
       padding: 20px 0;
       border-radius: 4px;
-      background-color: #f5f6fc;
+      background: #f5f6fc;
       border-radius: 4px;
       position: relative;
 

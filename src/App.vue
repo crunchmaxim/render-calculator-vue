@@ -4,12 +4,14 @@
     <div class="container">
       <CalcWrapper />      
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar.vue";
-import CalcWrapper from "@/components/CalcWrapper.vue";
+import CalcWrapper from "@/components/CalcWrapper.vue"
+import Footer from "@/components/Footer.vue";
 
 
 export default {
@@ -17,6 +19,7 @@ export default {
   components: {
     Navbar,
     CalcWrapper,
+    Footer
   },
 };
 </script>
