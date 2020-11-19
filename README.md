@@ -1,24 +1,7 @@
-# render-calculator
+Тестовое задание (Рендер калькулятор на Vue JS)
 
-## Project setup
-```
-npm install
-```
+Запуск сборки: команда "npm run serve" из корня проекта.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Посмотреть онлайн версию можно тут: https://render-calculator.web.app
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Выполнена верстка под мобильные устройства.
