@@ -2,7 +2,7 @@
   <div id="app">
     <Navbar />
     <div class="container">
-      <CalcWrapper />      
+      <CalcWrapper />
     </div>
     <Footer />
   </div>
@@ -10,16 +10,15 @@
 
 <script>
 import Navbar from "@/components/Navbar.vue";
-import CalcWrapper from "@/components/CalcWrapper.vue"
+import CalcWrapper from "@/components/CalcWrapper.vue";
 import Footer from "@/components/Footer.vue";
-
 
 export default {
   name: "App",
   components: {
     Navbar,
     CalcWrapper,
-    Footer
+    Footer,
   },
 };
 </script>
@@ -32,7 +31,6 @@ export default {
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
-    // font-family: "Poppins", sans-serif;
     color: #595d6e;
   }
 

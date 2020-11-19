@@ -31,7 +31,7 @@ export default {
     CalcFrames,
     CalcCards,
     CalcInfo,
-    CalcTimePrice
+    CalcTimePrice,
   },
 };
 </script>

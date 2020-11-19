@@ -101,27 +101,7 @@ export default {
     },
   },
   computed: {
-    ...mapGetters([
-      // "GET_GRAPHIC_CARD",
-      // "GET_CARD_LINE",
-      // "GET_CARD_MODEL",
-      // "GET_CARD_COUNT",
-      "GET_CARDS_TYPES",
-      "GET_CARDS_LINES",
-      "GET_CARDS_MODELS",
-    ]),
-    // graphicCard() {
-    //   return this.GET_GRAPHIC_CARD(this.cardId);
-    // },
-    // cardLine() {
-    //   return this.GET_CARD_LINE(this.cardId);
-    // },
-    // cardModel() {
-    //   return this.GET_CARD_MODEL(this.cardId);
-    // },
-    // cardCount() {
-    //   return this.GET_CARD_COUNT(this.cardId);
-    // },
+    ...mapGetters(["GET_CARDS_TYPES", "GET_CARDS_LINES", "GET_CARDS_MODELS"]),
     cardsTypes() {
       return this.GET_CARDS_TYPES;
     },
@@ -162,9 +142,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      // margin-top: 16px;
       margin-bottom: 0;
-      // background-color: #fff;
       padding: 20px 0;
       border-radius: 4px;
       background: #f5f6fc;
@@ -187,7 +165,7 @@ export default {
         top: 10px;
         right: 10px;
       }
-      
+
       &__select {
         margin-top: 17px;
       }
@@ -197,8 +175,6 @@ export default {
   @media (max-width: 768px) {
     .card-select-wrapper {
       background: #fff;
-      // padding: 20px 0;
-      // border-radius: 4px;
     }
   }
 </style>

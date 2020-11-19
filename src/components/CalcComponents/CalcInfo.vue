@@ -49,7 +49,7 @@ export default {
       padding-bottom: 13px;
 
       &__title {
-          font-size: 12px;
+        font-size: 12px;
       }
     }
   }

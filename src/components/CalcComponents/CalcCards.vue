@@ -13,16 +13,16 @@
       @click="addCard"
     >
       <span>Add another type card <img
-        class="add-card__img"
-        :src="require('../../assets/add_circle.png')"
-        alt=""
-      ></span> 
+          class="add-card__img"
+          :src="require('../../assets/add_circle.png')"
+          alt=""
+        ></span>
     </div>
     <div class="calc-cards__calculate">
-    <button
-      @click="makeCalculate"
-      class="calc-cards__calculate-btn"
-    >Calculate</button>
+      <button
+        @click="makeCalculate"
+        class="calc-cards__calculate-btn"
+      >Calculate</button>
     </div>
   </div>
 </template>
@@ -42,7 +42,7 @@ export default {
       this.ADD_NEW_CARD();
     },
     makeCalculate() {
-      this.CALCULATE()
+      this.CALCULATE();
     },
   },
   computed: {
@@ -88,13 +88,11 @@ export default {
 
   .add-card {
     display: flex;
-    // cursor: pointer;
 
     & span {
       display: flex;
       cursor: pointer;
     }
-
 
     &__img {
       margin-left: 15px;

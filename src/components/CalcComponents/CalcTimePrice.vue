@@ -26,19 +26,19 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from "vuex";
 
 export default {
   name: "CalcTimePrice",
   computed: {
     ...mapGetters(["GET_RENDER_TIME", "GET_PRICE"]),
     renderTime() {
-      return this.GET_RENDER_TIME
+      return this.GET_RENDER_TIME;
     },
     price() {
-      return this.GET_PRICE
-    }
-  }
+      return this.GET_PRICE;
+    },
+  },
 };
 </script>
 
@@ -58,7 +58,7 @@ export default {
     }
 
     &__input-title {
-      color: #526AE5;
+      color: #526ae5;
     }
 
     &__warning {
@@ -96,7 +96,7 @@ export default {
     }
   }
 
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     .time-price {
       background: #fff;
       margin-top: 16px;

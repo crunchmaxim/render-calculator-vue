@@ -11,7 +11,7 @@
       class="card-select__option"
       v-if="isOpen"
     >
-      <p        
+      <p
         v-for="option in options"
         :key="option.value"
         @click="selectOption(option)"
@@ -31,7 +31,6 @@ export default {
   },
   data() {
     return {
-      // currentOption: "",
       currentOption: this.options[0].name,
       isOpen: false,
     };
@@ -53,10 +52,6 @@ export default {
   },
   mounted() {
     this.currentOption = this.options[0].name;
-  },
-  updated() {
-    // this.currentOption = this.options[0].name;
-    // console.log('was updated');
   },
 };
 </script>
@@ -97,13 +92,13 @@ export default {
     }
   }
 
-      @media (max-width: 768px) {
-        .card-select {
-          box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+  @media (max-width: 768px) {
+    .card-select {
+      box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
 
-          &__option {
-            box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
-          }
-        }
+      &__option {
+        box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+      }
+    }
   }
 </style>

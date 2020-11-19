@@ -16,9 +16,17 @@
     />
 
     <div class="menu-icon-wrapper">
-      <a href="#" class="menu-icon">741.19 AP</a>
-      <a href="#" class="menu-icon"><span></span><img :src="require('../assets/notifications.png')"></a>
-      <label class="menu-icon" for="menu-btn"
+      <a
+        href="#"
+        class="menu-icon"
+      >741.19 AP</a>
+      <a
+        href="#"
+        class="menu-icon"
+      ><span></span><img :src="require('../assets/notifications.png')"></a>
+      <label
+        class="menu-icon"
+        for="menu-btn"
       ><span><img :src="require('../assets/menu.png')"></span></label>
 
     </div>
@@ -44,8 +52,8 @@ export default {
 </script>
 
 <style lang="scss">
-
-  a, a:visited {
+  a,
+  a:visited {
     text-decoration: none;
     color: inherit;
   }
@@ -76,7 +84,7 @@ export default {
     left: -50%;
     display: flex;
     align-items: center;
-    color: #526AE5;
+    color: #526ae5;
 
     a {
       margin-left: 15px;
@@ -104,7 +112,7 @@ export default {
     padding: 20px 20px;
     border-right: 1px solid #f4f4f4;
     text-decoration: none;
-    color: #A7ABC3;
+    color: #a7abc3;
   }
 
   .header .logo {
@@ -116,8 +124,6 @@ export default {
     text-decoration: none;
   }
 
-  /* menu */
-
   .header .menu {
     clear: both;
     max-height: 0;
@@ -126,8 +132,6 @@ export default {
     align-items: center;
     justify-content: space-between;
   }
-
-  /* menu icon */
 
   .header .menu-icon {
     cursor: pointer;
@@ -165,8 +169,6 @@ export default {
   .header .menu-icon .navicon:after {
     top: -5px;
   }
-
-  /* menu btn */
 
   .header .menu-btn {
     display: none;

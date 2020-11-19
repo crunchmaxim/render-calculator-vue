@@ -47,12 +47,12 @@ export default {
   methods: {
     ...mapMutations(["SET_PROJECT_DETAILS"]),
     changeAnimation() {
-      this.staticChecked = !this.staticChecked
-      this.SET_PROJECT_DETAILS()
+      this.staticChecked = !this.staticChecked;
+      this.SET_PROJECT_DETAILS();
     },
     changeStatic() {
-      this.animationChecked = !this.animationChecked
-      this.SET_PROJECT_DETAILS()
+      this.animationChecked = !this.animationChecked;
+      this.SET_PROJECT_DETAILS();
     },
   },
   mounted() {

@@ -43,34 +43,34 @@ export default {
   }
 
   @media (max-width: 768px) {
-      .footer {
-          background: #f5f6fc;
-          padding-bottom: 20px;
+    .footer {
+      background: #f5f6fc;
+      padding-bottom: 20px;
 
-          &__content {
-              min-height: 130px;
-              flex-direction: column-reverse;
-              justify-content: center;
-              padding: 0;
-          }
-
-          &__info {
-              width: 100%;
-              height: 50px;
-              background: #E0E0E0;
-              text-align: center;
-              padding-top: 12px;
-          }
-
-          &__links {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 10px;
-
-            a {
-                margin-top: 10px;
-            }
-          }
+      &__content {
+        min-height: 130px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 0;
       }
+
+      &__info {
+        width: 100%;
+        height: 50px;
+        background: #e0e0e0;
+        text-align: center;
+        padding-top: 12px;
+      }
+
+      &__links {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+
+        a {
+          margin-top: 10px;
+        }
+      }
+    }
   }
 </style>

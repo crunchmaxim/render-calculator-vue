@@ -56,7 +56,7 @@ export default {
       cursor: pointer;
 
       &:hover {
-          background-color: #f5f6fc;
+        background-color: #f5f6fc;
       }
 
       &.active {

@@ -28,7 +28,7 @@ export default {
       margin-top: 8px;
       margin-left: 21px;
       font-size: 16px;
-      font-weight:700;
+      font-weight: 700;
     }
 
     &__img-wrapper {
@@ -49,11 +49,11 @@ export default {
       padding-bottom: 25px;
 
       &__title {
-          text-align: center;
+        text-align: center;
       }
 
       &__img-wrapper {
-          box-shadow: 0px 4px 50px rgba(28, 92, 237, 0.1);
+        box-shadow: 0px 4px 50px rgba(28, 92, 237, 0.1);
       }
     }
   }
